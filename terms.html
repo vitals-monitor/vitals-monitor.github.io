@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for Health Monitor - Read our terms and conditions for using the app.">
+    <title>Terms of Service - Health Monitor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: #f7fafc;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .header-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .header-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+        
+        .header-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            padding: 24px 0;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .content {
+            background: white;
+            margin: 60px auto;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .update-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            color: #2d3748;
+        }
+        
+        .header h1 {
+            color: white;
+            background: none;
+            -webkit-text-fill-color: white;
+        }
+        
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 35px;
+            margin-bottom: 16px;
+            color: #2d3748;
+        }
+        
+        p {
+            font-size: 17px;
+            margin-bottom: 20px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+        
+        ul, ol {
+            margin: 20px 0 30px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            font-size: 17px;
+            color: #4a5568;
+            margin-bottom: 14px;
+            line-height: 1.8;
+        }
+        
+        strong {
+            color: #2d3748;
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid #667eea;
+            margin: 40px 0;
+        }
+        
+        .highlight-box h3 {
+            margin-top: 0;
+        }
+        
+        .warning-box {
+            background: rgba(245, 101, 101, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid #f56565;
+            margin: 40px 0;
+        }
+        
+        .info-box {
+            background: rgba(66, 153, 225, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid #4299e1;
+            margin: 40px 0;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 80px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .footer-section a:hover {
+            color: #667eea;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2d3748;
+            color: #718096;
+        }
+        
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 32px;
+            }
+            
+            .header-subtitle {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+                margin: 30px 10px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-icon">📜</div>
+        <h1 class="header-title">Terms of Service</h1>
+        <p class="header-subtitle">Please read these terms carefully before using Health Monitor.</p>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#features" class="nav-link">Features</a>
+            <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+            <a href="terms.html" class="nav-link active">Terms of Service</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <span class="update-badge">Last Updated: February 14, 2025</span>
+
+            <h1>Health Monitor Terms of Service</h1>
+
+            <p>Welcome to Health Monitor! These Terms of Service ("Terms," "Agreement") govern your access to and use of the Health Monitor mobile application ("App," "Service," "Health Monitor") available on iOS devices. By downloading, installing, accessing, or using Health Monitor, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the App.</p>
+
+            <div class="highlight-box">
+                <h3>⚠️ Important Notice</h3>
+                <p><strong>Please read these Terms carefully.</strong> They contain important information about your legal rights, remedies, and obligations, including limitations of liability, medical disclaimers, and dispute resolution provisions. By using Health Monitor, you acknowledge that you have read, understood, and agree to these Terms.</p>
+            </div>
+
+            <h2>1. Acceptance of Terms</h2>
+
+            <p>By using Health Monitor, you acknowledge and agree that:</p>
+            <ul>
+                <li>You have read, understood, and agree to be bound by these Terms</li>
+                <li>You have read and agree to our Privacy Policy, which is incorporated into these Terms by reference</li>
+                <li>You are at least 13 years of age (or the minimum age in your jurisdiction)</li>
+                <li>You have the legal capacity to enter into this binding agreement</li>
+                <li>If you are between 13 and 18 years old, you have obtained parental or guardian consent to use the App</li>
+                <li>If using the App on behalf of an organization, you have authority to bind that organization to these Terms</li>
+            </ul>
+
+            <h2>2. Medical Disclaimer</h2>
+
+            <div class="warning-box">
+                <h3>🏥 Critical Medical Disclaimer - READ CAREFULLY</h3>
+                <p><strong>Health Monitor is NOT a medical device and is not intended for medical use.</strong> The App is designed as a personal wellness tool for tracking and organizing your health information. It is NOT intended to:</p>
+                <ul>
+                    <li>Diagnose any disease, condition, or illness</li>
+                    <li>Treat, cure, or prevent any medical condition</li>
+                    <li>Replace professional medical advice, diagnosis, or treatment</li>
+                    <li>Be used for medical emergencies or urgent health situations</li>
+                    <li>Monitor critical or life-threatening health conditions</li>
+                    <li>Replace medical devices, equipment, or professional monitoring</li>
+                </ul>
+                <p><strong>ALWAYS seek the advice of qualified healthcare professionals regarding any medical questions or conditions.</strong> Never disregard professional medical advice or delay seeking it because of information provided by this app. If you think you may have a medical emergency, call your doctor or emergency services immediately.</p>
+            </div>
+
+            <h3>2.1 No Medical Advice</h3>
+            <p>Health Monitor does not provide medical advice. Any insights, recommendations, or information provided by the App are for general informational and educational purposes only. They should not be considered medical advice or used as a substitute for consultation with qualified healthcare professionals.</p>
+
+            <h3>2.2 User Responsibility</h3>
+            <p>You are solely responsible for:</p>
+            <ul>
+                <li>Consulting with your doctor or healthcare provider before making any health decisions</li>
+                <li>Verifying the accuracy of data you enter into the App</li>
+                <li>Using appropriate medical devices to obtain health measurements</li>
+                <li>Following your healthcare provider's treatment plan</li>
+                <li>Seeking immediate medical attention for emergencies or concerning symptoms</li>
+            </ul>
+
+            <h2>3. Description of Service</h2>
+
+            <p>Health Monitor provides a platform for users to:</p>
+
+            <h3>3.1 Core Features</h3>
+            <ul>
+                <li><strong>Blood Sugar Tracking:</strong> Record and monitor blood glucose readings</li>
+                <li><strong>Blood Pressure Tracking:</strong> Log systolic and diastolic blood pressure measurements</li>
+                <li><strong>Heart Rate Tracking:</strong> Record heart rate measurements</li>
+                <li><strong>Data Visualization:</strong> View trends, charts, and statistics based on your entries</li>
+                <li><strong>Reminders:</strong> Set up notifications for measurements and medications</li>
+                <li><strong>Apple Health Integration:</strong> Optional synchronization with Apple Health app</li>
+                <li><strong>iCloud Sync:</strong> Optional cloud synchronization across your iOS devices</li>
+                <li><strong>Export Reports:</strong> Generate PDF or CSV reports for sharing with healthcare providers</li>
+            </ul>
+
+            <h3>3.2 Service Modifications</h3>
+            <p>We reserve the right to modify, suspend, or discontinue any feature or aspect of the Service at any time, with or without notice, and without liability to you.</p>
+
+            <h2>4. User Responsibilities and Acceptable Use</h2>
+
+            <h3>4.1 Accurate Data Entry</h3>
+            <p>You are responsible for:</p>
+            <ul>
+                <li>Entering accurate and truthful health information</li>
+                <li>Using calibrated and approved medical devices for measurements</li>
+                <li>Reviewing and verifying all data you input</li>
+                <li>Updating or correcting inaccurate information promptly</li>
+            </ul>
+
+            <h3>4.2 Appropriate Use</h3>
+            <p>You agree to use Health Monitor only for lawful, personal, non-commercial purposes. You may NOT:</p>
+            <ul>
+                <li>Use the App for medical diagnosis or treatment decisions without consulting healthcare professionals</li>
+                <li>Rely solely on the App for managing critical or life-threatening health conditions</li>
+                <li>Share your health data in violation of applicable privacy laws</li>
+                <li>Use the App to provide medical advice or services to others</li>
+                <li>Attempt to reverse engineer, decompile, or disassemble the App</li>
+                <li>Remove or circumvent any security features or protections</li>
+                <li>Use automated systems, bots, or scrapers to access the Service</li>
+                <li>Upload malicious code, viruses, or harmful content</li>
+                <li>Violate any applicable laws or third-party rights</li>
+                <li>Sell, rent, lease, or redistribute the App without authorization</li>
+            </ul>
+
+            <h2>5. Data Accuracy and Reliability</h2>
+
+            <h3>5.1 User-Entered Data</h3>
+            <p>Health Monitor relies on data that YOU enter. We cannot verify the accuracy of your entries. The App's calculations, trends, and insights are only as accurate as the data you provide.</p>
+
+            <h3>5.2 No Guarantee of Accuracy</h3>
+            <p>We do not guarantee that:</p>
+            <ul>
+                <li>The App will be error-free or uninterrupted</li>
+                <li>Calculations or statistics will be completely accurate</li>
+                <li>Data synchronization will always work perfectly</li>
+                <li>Notifications will always be delivered on time</li>
+                <li>The App is suitable for your specific health condition</li>
+            </ul>
+
+            <h2>6. Intellectual Property Rights</h2>
+
+            <h3>6.1 Our Intellectual Property</h3>
+            <p>Health Monitor, including all content, features, functionality, source code, algorithms, user interface, graphics, logos, and trademarks, is owned by us and protected by international copyright, trademark, patent, and other intellectual property laws.</p>
+
+            <h3>6.2 Limited License</h3>
+            <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+            <ul>
+                <li>Download and install the App on your personal iOS devices</li>
+                <li>Use the App for personal, non-commercial health tracking purposes</li>
+                <li>Access features in accordance with these Terms</li>
+            </ul>
+
+            <p>This license automatically terminates if you violate these Terms.</p>
+
+            <h3>6.3 Your Data Ownership</h3>
+            <p>You retain all rights to the health data you enter into Health Monitor. We do not claim ownership of your personal health information.</p>
+
+            <h2>7. Privacy and Data Protection</h2>
+
+            <p>Your use of Health Monitor is also governed by our Privacy Policy, which explains how we handle your data. Key points include:</p>
+            <ul>
+                <li>Your health data is stored locally on your device and in your personal iCloud account (if you enable sync)</li>
+                <li>We do not collect, access, or store your health data on our servers</li>
+                <li>We do not sell or share your personal health information with third parties</li>
+                <li>You have full control over your data and can delete it at any time</li>
+            </ul>
+
+            <p>Please read our complete <a href="privacy-policy.html">Privacy Policy</a> for detailed information.</p>
+
+            <h2>8. Apple Health and iCloud</h2>
+
+            <h3>8.1 Apple Health Integration</h3>
+            <p>If you choose to integrate with Apple Health:</p>
+            <ul>
+                <li>You grant Health Monitor permission to read and write specified health data</li>
+                <li>Data sharing is governed by Apple's HealthKit framework and policies</li>
+                <li>You can revoke permissions at any time in iOS Settings</li>
+                <li>We are not responsible for Apple Health's functionality or data handling</li>
+            </ul>
+
+            <h3>8.2 iCloud Synchronization</h3>
+            <p>If you enable iCloud sync:</p>
+            <ul>
+                <li>Your data will be stored in your personal iCloud account</li>
+                <li>iCloud storage is subject to Apple's terms and your iCloud storage limits</li>
+                <li>You are responsible for maintaining your iCloud account security</li>
+                <li>We are not responsible for iCloud service availability or functionality</li>
+            </ul>
+
+            <h2>9. Disclaimers and Warranties</h2>
+
+            <h3>9.1 "AS IS" Provision</h3>
+            <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO:</p>
+            <ul>
+                <li>Warranties of merchantability, fitness for a particular purpose, and non-infringement</li>
+                <li>Warranties that the App will meet your specific health tracking needs</li>
+                <li>Warranties that the App will be error-free, secure, or uninterrupted</li>
+                <li>Warranties regarding the accuracy, reliability, or completeness of data, calculations, or insights</li>
+                <li>Warranties that the App is suitable for managing your health condition</li>
+                <li>Warranties that defects will be corrected or that updates will be provided</li>
+            </ul>
+
+            <h3>9.2 No Medical Warranty</h3>
+            <p>WE MAKE NO WARRANTIES REGARDING:</p>
+            <ul>
+                <li>The App's suitability for medical use or health management</li>
+                <li>The accuracy of health insights or recommendations</li>
+                <li>The App's ability to detect health problems or abnormalities</li>
+                <li>The reliability of data synchronization or storage</li>
+            </ul>
+
+            <h2>10. Limitation of Liability</h2>
+
+            <h3>10.1 Liability Limitations</h3>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL HEALTH MONITOR, ITS AFFILIATES, DIRECTORS, EMPLOYEES, LICENSORS, OR AGENTS BE LIABLE FOR:</p>
+            <ul>
+                <li>Any indirect, incidental, consequential, punitive, or special damages</li>
+                <li>Medical complications, injuries, or health deterioration</li>
+                <li>Lost data, revenue, profits, or business opportunities</li>
+                <li>Personal injury or wrongful death</li>
+                <li>Failure to detect health problems or emergencies</li>
+                <li>Reliance on inaccurate data, calculations, or insights</li>
+                <li>Data loss or corruption</li>
+                <li>Incompatibility with your devices or other apps</li>
+                <li>Any damages arising from use or inability to use the App</li>
+            </ul>
+
+            <h3>10.2 Maximum Liability Cap</h3>
+            <p>Our total liability to you for any claims arising from your use of Health Monitor shall not exceed fifty U.S. dollars ($50.00) or the amount you paid for the App in the past 12 months, whichever is greater.</p>
+
+            <h3>10.3 Essential Basis of Agreement</h3>
+            <p>You acknowledge that these limitations of liability are an essential basis of the agreement between us, and that we would not provide the App without these limitations.</p>
+
+            <h2>11. Indemnification</h2>
+
+            <p>You agree to indemnify, defend, and hold harmless Health Monitor, its affiliates, officers, directors, employees, licensors, and agents from and against any claims, liabilities, damages, losses, costs, or expenses (including reasonable attorneys' fees) arising from or related to:</p>
+            <ul>
+                <li>Your use or misuse of the App</li>
+                <li>Your violation of these Terms</li>
+                <li>Your violation of any third-party rights</li>
+                <li>Your violation of applicable laws or regulations</li>
+                <li>Health decisions made based on information from the App</li>
+                <li>Data you enter, store, or share through the App</li>
+                <li>Your negligent or willful misconduct</li>
+            </ul>
+
+            <h2>12. Third-Party Services and Content</h2>
+
+            <p>Health Monitor may integrate with or link to third-party services (such as Apple Health, iCloud). We are not responsible for:</p>
+            <ul>
+                <li>The availability, accuracy, or content of third-party services</li>
+                <li>Third-party privacy practices or terms of service</li>
+                <li>Any harm or damages arising from third-party services</li>
+                <li>Changes or discontinuation of third-party integrations</li>
+            </ul>
+
+            <p>Your use of third-party services is governed by their respective terms and policies.</p>
+
+            <h2>13. Updates and Modifications</h2>
+
+            <h3>13.1 App Updates</h3>
+            <p>We may release updates to the App from time to time. Updates may:</p>
+            <ul>
+                <li>Add new features or modify existing features</li>
+                <li>Fix bugs or improve performance</li>
+                <li>Address security vulnerabilities</li>
+                <li>Change the user interface or functionality</li>
+            </ul>
+
+            <p>You are responsible for downloading and installing updates. We recommend keeping the App updated for optimal performance and security.</p>
+
+            <h3>13.2 Changes to Terms</h3>
+            <p>We reserve the right to modify these Terms at any time. When we make changes:</p>
+            <ul>
+                <li>We will update the "Last Updated" date at the top of these Terms</li>
+                <li>We will notify you through the App or via the App Store for material changes</li>
+                <li>Your continued use after changes constitutes acceptance of updated Terms</li>
+            </ul>
+
+            <p>If you do not agree to updated Terms, you must stop using the App and may request a refund according to Apple's App Store refund policy.</p>
+
+            <h2>14. Termination</h2>
+
+            <h3>14.1 Termination by You</h3>
+            <p>You may stop using Health Monitor at any time by:</p>
+            <ul>
+                <li>Uninstalling the App from your iOS device</li>
+                <li>Deleting your data within the App settings</li>
+                <li>Disabling iCloud sync</li>
+                <li>Revoking Apple Health permissions</li>
+            </ul>
+
+            <h3>14.2 Termination by Us</h3>
+            <p>We may suspend or terminate your access to the App if you:</p>
+            <ul>
+                <li>Violate these Terms or our policies</li>
+                <li>Engage in fraudulent or illegal activities</li>
+                <li>Threaten the security or integrity of the Service</li>
+                <li>Use the App in a manner that could harm us or other users</li>
+            </ul>
+
+            <h3>14.3 Effect of Termination</h3>
+            <p>Upon termination:</p>
+            <ul>
+                <li>Your license to use the App ends immediately</li>
+                <li>You must stop using the App and delete it from your devices</li>
+                <li>Data stored locally on your device remains yours to manage</li>
+                <li>Data in your iCloud account remains under your control</li>
+                <li>Sections of these Terms that by their nature should survive will continue to apply</li>
+            </ul>
+
+            <h2>15. Dispute Resolution and Governing Law</h2>
+
+            <h3>15.1 Informal Resolution</h3>
+            <p>Before filing any legal claim, you agree to contact us at support@healthmonitor.app to attempt to resolve the dispute informally. We will work in good faith to resolve disputes within 60 days.</p>
+
+            <h3>15.2 Governing Law</h3>
+            <p>These Terms shall be governed by and construed in accordance with the laws of your jurisdiction of residence, without regard to conflict of law provisions.</p>
+
+            <h3>15.3 Arbitration Agreement</h3>
+            <p>Any dispute arising from these Terms or your use of Health Monitor shall be resolved through binding arbitration, except where prohibited by law. You and Health Monitor agree to waive the right to a jury trial or to participate in a class action.</p>
+
+            <h2>16. General Provisions</h2>
+
+            <h3>16.1 Entire Agreement</h3>
+            <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and Health Monitor regarding use of the App and supersede all prior agreements.</p>
+
+            <h3>16.2 Severability</h3>
+            <p>If any provision of these Terms is found to be invalid, illegal, or unenforceable, the remaining provisions shall remain in full force and effect.</p>
+
+            <h3>16.3 Waiver</h3>
+            <p>Our failure to enforce any right or provision of these Terms shall not constitute a waiver of that right or provision.</p>
+
+            <h3>16.4 Assignment</h3>
+            <p>You may not assign or transfer these Terms or your rights under them without our prior written consent. We may assign these Terms without restriction.</p>
+
+            <h3>16.5 Force Majeure</h3>
+            <p>We are not liable for any delay or failure to perform due to causes beyond our reasonable control, including acts of God, natural disasters, war, terrorism, labor disputes, or governmental actions.</p>
+
+            <h2>17. Apple-Specific Terms</h2>
+
+            <p>Because Health Monitor is distributed through the Apple App Store, you acknowledge and agree that:</p>
+            <ul>
+                <li>These Terms are between you and Health Monitor, not Apple</li>
+                <li>Apple has no obligation to provide support or maintenance for the App</li>
+                <li>Apple is not responsible for any claims relating to the App</li>
+                <li>Apple is a third-party beneficiary of these Terms and may enforce them</li>
+                <li>You must comply with Apple's App Store Terms of Service</li>
+                <li>The App is licensed, not sold, to you</li>
+            </ul>
+
+            <h2>18. Contact Information</h2>
+
+            <p>If you have questions, concerns, or feedback regarding these Terms or the Service, please contact us:</p>
+
+            <div class="info-box">
+                <p><strong>Email:</strong> support@healthmonitor.app</p>
+                <p><strong>Subject Line:</strong> Terms Inquiry - Health Monitor</p>
+                <p><strong>Response Time:</strong> We aim to respond within 48 hours</p>
+            </div>
+
+            <h2>19. Acknowledgment and Consent</h2>
+
+            <p>By using Health Monitor, you acknowledge that you have:</p>
+            <ul>
+                <li>Read and understood these Terms of Service in their entirety</li>
+                <li>Read and understood our Privacy Policy</li>
+                <li>Understood that this App is NOT a medical device and does NOT provide medical advice</li>
+                <li>Agreed to consult healthcare professionals for all medical decisions</li>
+                <li>Accepted the limitations of liability and disclaimers contained herein</li>
+                <li>Agreed to resolve disputes through arbitration where permitted by law</li>
+            </ul>
+
+            <div class="warning-box">
+                <h3>⚠️ Final Important Reminder</h3>
+                <p><strong>Health Monitor is a personal wellness tool, NOT a medical device.</strong> It is designed to help you organize and track your health information for discussion with your healthcare provider. NEVER use this app as a substitute for professional medical care, diagnosis, or treatment. If you have a medical emergency, call emergency services immediately. Your health and safety are paramount—always consult qualified healthcare professionals for medical advice.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Thank You</h3>
+                <p>Thank you for using Health Monitor. We're committed to providing a secure, private, and user-friendly health tracking experience. While we cannot provide medical advice, we hope our app helps you better understand and manage your health data. Please use this tool responsibly and always work closely with your healthcare providers.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Health Monitor</h3>
+                    <p>Comprehensive health tracking for iOS. Monitor blood sugar, blood pressure, and heart rate with precision and privacy.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <p>Email: support@healthmonitor.app</p>
+                    <p>Response time: Within 24 hours</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <p>HIPAA Compliant</p>
+                    <p>Privacy Protected</p>
+                    <p>Secure & Encrypted</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Health Monitor. All rights reserved.</p>
+                <p style="margin-top: 10px; font-size: 14px;">This app is not a medical device and is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
