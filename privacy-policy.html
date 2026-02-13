@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Health Monitor - Learn how we protect your health data and respect your privacy.">
+    <title>Privacy Policy - Health Monitor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: #f7fafc;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .header-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .header-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+        
+        .header-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            padding: 24px 0;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .content {
+            background: white;
+            margin: 60px auto;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .update-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            color: #2d3748;
+        }
+        
+        .header h1 {
+            color: white;
+            background: none;
+            -webkit-text-fill-color: white;
+        }
+        
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+        
+        h2:first-of-type {
+            margin-top: 0;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 35px;
+            margin-bottom: 16px;
+            color: #2d3748;
+        }
+        
+        p {
+            font-size: 17px;
+            margin-bottom: 20px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+        
+        ul, ol {
+            margin: 20px 0 30px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            font-size: 17px;
+            color: #4a5568;
+            margin-bottom: 14px;
+            line-height: 1.8;
+        }
+        
+        strong {
+            color: #2d3748;
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid #667eea;
+            margin: 40px 0;
+        }
+        
+        .highlight-box h3 {
+            margin-top: 0;
+        }
+        
+        .warning-box {
+            background: rgba(245, 101, 101, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid #f56565;
+            margin: 40px 0;
+        }
+        
+        .info-box {
+            background: rgba(66, 153, 225, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            border-left: 5px solid #4299e1;
+            margin: 40px 0;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 60px 20px 30px;
+            margin-top: 80px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .footer-section a:hover {
+            color: #667eea;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2d3748;
+            color: #718096;
+        }
+        
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 32px;
+            }
+            
+            .header-subtitle {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 30px 20px;
+                margin: 30px 10px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-icon">🔒</div>
+        <h1 class="header-title">Privacy Policy</h1>
+        <p class="header-subtitle">Your health data is private and secure. Learn how we protect your information.</p>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="privacy-policy.html" class="nav-link active">Privacy Policy</a>
+            <a href="terms.html" class="nav-link">Terms of Service</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <span class="update-badge">Last Updated: February 14, 2025</span>
+
+            <h1>Health Monitor Privacy Policy</h1>
+
+            <p>At Health Monitor, your privacy is our highest priority. This Privacy Policy explains how we collect, use, protect, and handle your personal health information when you use our iOS application ("Health Monitor," "the App," "our App"). By using Health Monitor, you agree to the practices described in this policy.</p>
+
+            <div class="highlight-box">
+                <h3>🔐 Privacy-First Commitment</h3>
+                <p><strong>Health Monitor is built with privacy at its core.</strong> We do not sell, rent, or share your personal health data with third parties. Your health information is encrypted and stored locally on your device or in your personal iCloud account. We never have access to your health readings, and we cannot view or analyze your personal health data.</p>
+            </div>
+
+            <h2>1. Information We Collect</h2>
+
+            <h3>1.1 Health Data You Provide</h3>
+            <p>Health Monitor allows you to track and store the following health information:</p>
+            <ul>
+                <li><strong>Blood Sugar Readings:</strong> Glucose measurements, timestamps, meal context (before/after meals), and notes</li>
+                <li><strong>Blood Pressure Readings:</strong> Systolic and diastolic pressure measurements, heart rate during measurement, timestamps, and notes</li>
+                <li><strong>Heart Rate Data:</strong> Heart rate measurements, timestamps, activity context (resting/exercise), and notes</li>
+                <li><strong>Personal Health Profile:</strong> Age, weight, height, gender, and other optional demographic information for personalized insights</li>
+                <li><strong>Medications:</strong> Names, dosages, and schedules of medications you choose to track</li>
+                <li><strong>Health Goals:</strong> Target ranges and wellness goals you set within the app</li>
+                <li><strong>Notes and Tags:</strong> Any notes, tags, or contextual information you add to your health entries</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Important:</strong> All health data is stored locally on your device and synced only to your personal iCloud account if you enable iCloud sync. We never receive, access, or store this information on our servers.</p>
+            </div>
+
+            <h3>1.2 Technical Information</h3>
+            <p>To improve app functionality and user experience, we may collect limited technical information:</p>
+            <ul>
+                <li><strong>Device Information:</strong> Device type, iOS version, app version, and device language settings</li>
+                <li><strong>Usage Analytics:</strong> Anonymous, aggregated data about which features are used and app performance metrics</li>
+                <li><strong>Crash Reports:</strong> Technical diagnostics when the app crashes (does not include personal health data)</li>
+            </ul>
+
+            <h3>1.3 Information We Do NOT Collect</h3>
+            <p>Health Monitor does NOT collect:</p>
+            <ul>
+                <li>Your name, email address, or contact information (unless you contact support)</li>
+                <li>Location data or GPS information</li>
+                <li>Social media information or contacts</li>
+                <li>Payment information (app purchases are processed entirely through Apple)</li>
+                <li>Advertising identifiers</li>
+                <li>Any health data stored in your device or iCloud</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+
+            <h3>2.1 Health Data Usage</h3>
+            <p>Your health data is used exclusively on your device for:</p>
+            <ul>
+                <li>Displaying your health readings and trends</li>
+                <li>Generating charts, graphs, and visualizations</li>
+                <li>Calculating averages, ranges, and statistics</li>
+                <li>Providing personalized insights and recommendations</li>
+                <li>Setting up reminders and notifications</li>
+                <li>Exporting reports for sharing with healthcare providers</li>
+                <li>Syncing across your devices via iCloud (if enabled)</li>
+            </ul>
+
+            <p><strong>All processing happens locally on your device.</strong> Your health readings never leave your device except when you explicitly choose to share them (e.g., exporting a PDF report to email to your doctor).</p>
+
+            <h3>2.2 Technical Data Usage</h3>
+            <p>We use limited technical data to:</p>
+            <ul>
+                <li>Improve app performance and fix bugs</li>
+                <li>Understand which features are most valuable to users</li>
+                <li>Optimize the user interface and experience</li>
+                <li>Ensure compatibility with iOS versions and devices</li>
+                <li>Develop new features based on usage patterns</li>
+            </ul>
+
+            <p>This technical data is anonymized and aggregated, meaning it cannot be linked back to you or your health information.</p>
+
+            <h2>3. Data Storage and Security</h2>
+
+            <h3>3.1 Local Storage</h3>
+            <p>All your health data is stored locally on your iOS device using Apple's secure Core Data framework with encryption. Your data is protected by your device passcode, Face ID, or Touch ID.</p>
+
+            <h3>3.2 iCloud Storage</h3>
+            <p>If you enable iCloud sync (optional), your health data is encrypted and stored in your personal iCloud account. We use Apple's CloudKit framework, which provides:</p>
+            <ul>
+                <li>End-to-end encryption for your health data</li>
+                <li>Storage in your personal iCloud space (not our servers)</li>
+                <li>Automatic sync across your iOS devices</li>
+                <li>Protection under Apple's privacy and security standards</li>
+            </ul>
+
+            <p><strong>Important:</strong> Your iCloud data is accessible only to you through your Apple ID. We cannot access, view, or retrieve your iCloud health data.</p>
+
+            <h3>3.3 Apple Health Integration</h3>
+            <p>If you choose to sync with Apple Health, data is shared directly between Health Monitor and the Apple Health app on your device. This integration:</p>
+            <ul>
+                <li>Requires your explicit permission</li>
+                <li>Uses Apple's HealthKit framework with secure encryption</li>
+                <li>Keeps all data on your device and in your iCloud account</li>
+                <li>Can be disabled at any time in your device settings</li>
+            </ul>
+
+            <h3>3.4 Security Measures</h3>
+            <p>We implement industry-standard security practices:</p>
+            <ul>
+                <li><strong>Data Encryption:</strong> All health data is encrypted at rest and in transit</li>
+                <li><strong>Secure Coding:</strong> We follow Apple's security best practices for iOS development</li>
+                <li><strong>Regular Updates:</strong> We promptly address security vulnerabilities with app updates</li>
+                <li><strong>No Third-Party Access:</strong> We do not use third-party analytics or advertising SDKs that could access your data</li>
+                <li><strong>Minimal Permissions:</strong> We request only essential iOS permissions needed for core functionality</li>
+            </ul>
+
+            <h2>4. Data Sharing and Disclosure</h2>
+
+            <h3>4.1 We Do Not Sell Your Data</h3>
+            <p><strong>Health Monitor does not sell, rent, trade, or share your personal health information with anyone for any reason.</strong> Your health data belongs to you, and we are committed to keeping it private.</p>
+
+            <h3>4.2 No Third-Party Sharing</h3>
+            <p>We do not share your health data with:</p>
+            <ul>
+                <li>Advertisers or marketing companies</li>
+                <li>Data brokers or analytics firms</li>
+                <li>Insurance companies</li>
+                <li>Employers or healthcare organizations</li>
+                <li>Social media platforms</li>
+                <li>Any other third parties</li>
+            </ul>
+
+            <h3>4.3 User-Initiated Sharing Only</h3>
+            <p>Your health data is shared only when you explicitly choose to share it:</p>
+            <ul>
+                <li><strong>PDF Export:</strong> When you generate and share health reports with your doctor</li>
+                <li><strong>Apple Health:</strong> When you enable synchronization with Apple Health app</li>
+                <li><strong>Device Sync:</strong> When you enable iCloud sync across your personal devices</li>
+            </ul>
+
+            <h3>4.4 Legal Requirements</h3>
+            <p>We may disclose limited information only if required by law, such as:</p>
+            <ul>
+                <li>Compliance with valid legal process (subpoena, court order)</li>
+                <li>Protection of our legal rights and property</li>
+                <li>Prevention of fraud or security threats</li>
+                <li>Protection of public safety in emergency situations</li>
+            </ul>
+
+            <p><strong>Important:</strong> Because we do not collect or store your health data on our servers, we would have no health information to disclose even if legally required.</p>
+
+            <h2>5. Your Privacy Rights and Controls</h2>
+
+            <h3>5.1 Access Your Data</h3>
+            <p>You have complete access to all your health data within the app. You can:</p>
+            <ul>
+                <li>View all your readings and entries at any time</li>
+                <li>Export your data to PDF or CSV format</li>
+                <li>Review your health trends and statistics</li>
+                <li>Access your data across all your iOS devices (with iCloud sync)</li>
+            </ul>
+
+            <h3>5.2 Modify or Delete Data</h3>
+            <p>You have full control over your health data:</p>
+            <ul>
+                <li>Edit or update any health reading</li>
+                <li>Delete individual entries or multiple entries</li>
+                <li>Delete all data from the app settings</li>
+                <li>Uninstall the app to permanently remove all local data</li>
+            </ul>
+
+            <h3>5.3 Control iCloud Sync</h3>
+            <p>You can enable or disable iCloud synchronization at any time:</p>
+            <ul>
+                <li>Turn off iCloud sync in app settings</li>
+                <li>Delete iCloud data while keeping local data</li>
+                <li>Manage iCloud storage through your iOS device settings</li>
+            </ul>
+
+            <h3>5.4 Control Apple Health Integration</h3>
+            <p>You can manage Apple Health permissions:</p>
+            <ul>
+                <li>Enable or disable specific health data types</li>
+                <li>Revoke Health Monitor's access to Apple Health</li>
+                <li>Manage permissions in iOS Settings → Health → Apps → Health Monitor</li>
+            </ul>
+
+            <h3>5.5 Notification Controls</h3>
+            <p>You can manage reminder notifications:</p>
+            <ul>
+                <li>Enable or disable notifications in app settings</li>
+                <li>Customize reminder times and frequencies</li>
+                <li>Manage notification permissions in iOS Settings</li>
+            </ul>
+
+            <h2>6. Children's Privacy</h2>
+
+            <p>Health Monitor is intended for users aged 13 and older. We do not knowingly collect personal health information from children under 13. If you are a parent or guardian and believe your child has provided health data through the app, please contact us at support@healthmonitor.app, and we will assist you in deleting the information.</p>
+
+            <p>For users aged 13-17, we recommend parental guidance when using health tracking apps and sharing health information.</p>
+
+            <h2>7. HIPAA Compliance</h2>
+
+            <p>Health Monitor is designed with healthcare privacy standards in mind:</p>
+            <ul>
+                <li>We do not act as a "covered entity" or "business associate" under HIPAA</li>
+                <li>We do not create, receive, maintain, or transmit Protected Health Information (PHI) on our servers</li>
+                <li>All health data remains under your direct control on your device and iCloud account</li>
+                <li>We follow privacy-by-design principles aligned with HIPAA's privacy rule</li>
+            </ul>
+
+            <div class="warning-box">
+                <p><strong>Medical Disclaimer:</strong> Health Monitor is a personal wellness app and is not a medical device. It is not intended to diagnose, treat, cure, or prevent any disease. Always consult with qualified healthcare professionals for medical advice, diagnosis, and treatment.</p>
+            </div>
+
+            <h2>8. International Users and Data Transfers</h2>
+
+            <p>Health Monitor is available globally through the Apple App Store. Because all health data is stored locally on your device or in your personal iCloud account:</p>
+            <ul>
+                <li>Your health data never leaves your chosen storage location (device or iCloud)</li>
+                <li>No international data transfers occur for health information</li>
+                <li>Data residency is determined by your iCloud account settings</li>
+                <li>Your data is protected by Apple's global privacy and security standards</li>
+            </ul>
+
+            <p>Limited technical analytics (anonymous and aggregated) may be processed in the United States, but this data does not include any personal health information.</p>
+
+            <h2>9. Third-Party Services</h2>
+
+            <h3>9.1 Apple Services</h3>
+            <p>Health Monitor uses the following Apple frameworks and services:</p>
+            <ul>
+                <li><strong>CloudKit:</strong> For optional iCloud synchronization</li>
+                <li><strong>HealthKit:</strong> For optional Apple Health integration</li>
+                <li><strong>App Store:</strong> For app distribution and in-app purchases</li>
+            </ul>
+
+            <p>These services are governed by Apple's privacy policies and terms of service.</p>
+
+            <h3>9.2 No Advertising or Analytics SDKs</h3>
+            <p>Health Monitor does not use:</p>
+            <ul>
+                <li>Third-party advertising networks</li>
+                <li>Third-party analytics platforms (like Google Analytics)</li>
+                <li>Social media SDKs</li>
+                <li>Tracking or attribution services</li>
+            </ul>
+
+            <p>We prioritize your privacy over data collection for marketing purposes.</p>
+
+            <h2>10. Data Retention</h2>
+
+            <h3>10.1 Health Data Retention</h3>
+            <p>Your health data is retained:</p>
+            <ul>
+                <li>Indefinitely on your device until you choose to delete it</li>
+                <li>In your iCloud account as long as you maintain iCloud sync</li>
+                <li>You have complete control over retention periods</li>
+            </ul>
+
+            <h3>10.2 Technical Data Retention</h3>
+            <p>Anonymous technical data (crash reports, usage analytics) is retained for:</p>
+            <ul>
+                <li>Up to 90 days for crash reports</li>
+                <li>Up to 12 months for aggregated usage analytics</li>
+                <li>This data cannot be linked to your identity or health information</li>
+            </ul>
+
+            <h2>11. Changes to This Privacy Policy</h2>
+
+            <p>We may update this Privacy Policy from time to time to reflect:</p>
+            <ul>
+                <li>Changes in app features or functionality</li>
+                <li>Changes in privacy laws or regulations</li>
+                <li>Improvements to our privacy practices</li>
+            </ul>
+
+            <p>When we make changes, we will:</p>
+            <ul>
+                <li>Update the "Last Updated" date at the top of this policy</li>
+                <li>Notify you through the app for material changes</li>
+                <li>Provide a summary of changes when you update the app</li>
+                <li>Give you the opportunity to review changes before continuing to use the app</li>
+            </ul>
+
+            <p>Your continued use of Health Monitor after privacy policy updates constitutes acceptance of the revised policy.</p>
+
+            <h2>12. Contact Us</h2>
+
+            <p>If you have questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:</p>
+
+            <div class="info-box">
+                <p><strong>Email:</strong> support@healthmonitor.app</p>
+                <p><strong>Subject Line:</strong> Privacy Inquiry - Health Monitor</p>
+                <p><strong>Response Time:</strong> We aim to respond to all privacy inquiries within 48 hours</p>
+            </div>
+
+            <p>For specific privacy rights requests (data access, deletion, correction), please include:</p>
+            <ul>
+                <li>A detailed description of your request</li>
+                <li>Information to help us verify your identity</li>
+                <li>Any specific data or time periods you're inquiring about</li>
+            </ul>
+
+            <h2>13. Your Consent</h2>
+
+            <p>By using Health Monitor, you acknowledge that you have read, understood, and agree to this Privacy Policy. If you do not agree with our privacy practices, please do not use the app.</p>
+
+            <div class="highlight-box">
+                <h3>💚 Our Commitment to You</h3>
+                <p>At Health Monitor, we believe health data is deeply personal and should remain private. We've built this app with privacy at its foundation, not as an afterthought. Your trust is paramount, and we're committed to maintaining the highest standards of data protection and transparency. Thank you for trusting Health Monitor with your health journey.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Health Monitor</h3>
+                    <p>Comprehensive health tracking for iOS. Monitor blood sugar, blood pressure, and heart rate with precision and privacy.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <p>Email: support@healthmonitor.app</p>
+                    <p>Response time: Within 24 hours</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <p>HIPAA Compliant</p>
+                    <p>Privacy Protected</p>
+                    <p>Secure & Encrypted</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Health Monitor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
