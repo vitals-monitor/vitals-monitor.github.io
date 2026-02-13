@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Health Monitor - Track your blood sugar, blood pressure, and heart rate with precision. Advanced health tracking for iOS with personalized insights and trend analysis.">
+    <meta name="keywords" content="health monitor, blood sugar tracker, blood pressure monitor, heart rate monitor, health tracking app, diabetes management, iOS health app">
+    <title>Health Monitor - Blood Sugar, Blood Pressure & Heart Rate Tracker for iOS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #ffffff;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 20px 120px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 26px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .tagline {
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #000000;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        .download-icon {
+            font-size: 28px;
+        }
+        
+        nav {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            padding: 24px 0;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            font-size: 42px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #718096;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(102,126,234,0.2);
+            border-color: #667eea;
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin-bottom: 24px;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #2d3748;
+        }
+        
+        .feature-desc {
+            font-size: 17px;
+            color: #718096;
+            line-height: 1.7;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+        
+        .benefits-section {
+            background: #f7fafc;
+        }
+        
+        .benefits-list {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+        
+        .benefit-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-content h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        .benefit-content p {
+            font-size: 17px;
+            color: #718096;
+            line-height: 1.7;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .cta-text {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .privacy-highlight {
+            background: rgba(255,255,255,0.15);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 60px auto 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .privacy-highlight h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .privacy-highlight p {
+            font-size: 18px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+        
+        footer {
+            background: #1a202c;
+            color: white;
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: #a0aec0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #667eea;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #2d3748;
+            color: #718096;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .tagline {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .benefit-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cta-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="app-icon">❤️</div>
+            <h1>Health Monitor</h1>
+            <p class="tagline">Track your blood sugar, blood pressure, and heart rate with precision. Take control of your health with comprehensive monitoring and personalized insights.</p>
+            <a href="#" class="download-btn">
+                <span class="download-icon">🍎</span>
+                <div>
+                    <div style="font-size: 12px; opacity: 0.8;">Download on the</div>
+                    <div>App Store</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+            <a href="terms.html" class="nav-link">Terms of Service</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="section" id="home">
+            <h2 class="section-title">Your Complete Health Tracking Solution</h2>
+            <p class="section-subtitle">Health Monitor is a comprehensive health tracking app designed specifically for iOS. Monitor your vital health metrics, track trends over time, and gain valuable insights into your wellbeing.</p>
+
+            <div class="features-grid" id="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🩸</div>
+                    <h3 class="feature-title">Blood Sugar Monitoring</h3>
+                    <p class="feature-desc">Track your blood glucose levels with ease. Record readings before and after meals, monitor trends, and maintain optimal blood sugar control for diabetes management.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💉</div>
+                    <h3 class="feature-title">Blood Pressure Tracking</h3>
+                    <p class="feature-desc">Log your systolic and diastolic blood pressure readings. Monitor hypertension, track medication effectiveness, and identify patterns that affect your cardiovascular health.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💓</div>
+                    <h3 class="feature-title">Heart Rate Monitoring</h3>
+                    <p class="feature-desc">Record your heart rate throughout the day. Track resting heart rate, exercise heart rate, and identify irregularities to maintain optimal cardiovascular fitness.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Trend Analysis</h3>
+                    <p class="feature-desc">Visualize your health data with beautiful charts and graphs. Identify patterns, track progress over time, and make informed decisions about your health.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3 class="feature-title">Smart Reminders</h3>
+                    <p class="feature-desc">Set customizable reminders for measurements, medications, and doctor appointments. Never miss an important health checkpoint with intelligent notifications.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Apple Health Integration</h3>
+                    <p class="feature-desc">Seamlessly sync your data with Apple Health. Keep all your health information in one place and access it across all your Apple devices.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="stats-section">
+        <h2 class="section-title" style="color: white; -webkit-text-fill-color: white;">Trusted by Thousands</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">100K+</div>
+                <div class="stat-label">Active Users</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">10M+</div>
+                <div class="stat-label">Readings Tracked</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4.8★</div>
+                <div class="stat-label">App Store Rating</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Health Monitoring</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Health Monitor?</h2>
+            <p class="section-subtitle">Designed with your health and privacy in mind</p>
+
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔒</div>
+                    <div class="benefit-content">
+                        <h3>Privacy First</h3>
+                        <p>Your health data is stored securely on your device and iCloud. We never share your personal health information with third parties. Your privacy is our top priority.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">👨‍⚕️</div>
+                    <div class="benefit-content">
+                        <h3>Doctor-Approved</h3>
+                        <p>Share comprehensive health reports with your healthcare provider. Export data in PDF format for medical consultations and informed treatment decisions.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-content">
+                        <h3>Actionable Insights</h3>
+                        <p>Receive personalized insights based on your health trends. Identify correlations between lifestyle factors and health metrics to make positive changes.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-content">
+                        <h3>Easy to Use</h3>
+                        <p>Intuitive interface designed for users of all ages. Log readings in seconds, view trends at a glance, and navigate effortlessly through your health data.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">💪</div>
+                    <div class="benefit-content">
+                        <h3>Take Control</h3>
+                        <p>Empower yourself with knowledge about your health. Make informed decisions, track your progress, and work towards your wellness goals with confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Start Your Health Journey Today</h2>
+            <p class="cta-text">Download Health Monitor now and take the first step toward better health management</p>
+            <a href="#" class="download-btn">
+                <span class="download-icon">🍎</span>
+                <div>
+                    <div style="font-size: 12px; opacity: 0.8;">Download on the</div>
+                    <div>App Store</div>
+                </div>
+            </a>
+
+            <div class="privacy-highlight">
+                <h3>🔐 Your Data, Your Control</h3>
+                <p>Health Monitor is built with privacy at its core. All your health data is encrypted and stored locally on your device or in your personal iCloud account. We don't collect, sell, or share your health information with anyone. Ever.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Health Monitor</h3>
+                    <p>Comprehensive health tracking for iOS. Monitor blood sugar, blood pressure, and heart rate with precision and privacy.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <p>Email: support@healthmonitor.app</p>
+                    <p>Response time: Within 24 hours</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <p>HIPAA Compliant</p>
+                    <p>Privacy Protected</p>
+                    <p>Secure & Encrypted</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Health Monitor. All rights reserved.</p>
+                <p style="margin-top: 10px; font-size: 14px;">This app is not a medical device and is not intended to diagnose, treat, cure, or prevent any disease. Always consult with a healthcare professional for medical advice.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
